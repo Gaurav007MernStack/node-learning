@@ -27,7 +27,8 @@ const userSchema = new Schema({
     },
     password: {
         type: String,
-        required: true
+        required: true,
+        strict: true
     },
     address: {
         type: String,
@@ -36,7 +37,8 @@ const userSchema = new Schema({
         type: String,
         default: 'USER',
         enum: ['USER', 'ADMIN'],
-        uppercase: true
+        uppercase: true,
+        strict: true
     },
     phoneNumber: { 
         type: Number,

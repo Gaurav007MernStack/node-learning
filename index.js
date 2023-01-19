@@ -15,7 +15,7 @@ mongoose.connect("mongodb://localhost:27017/nodepractice", {
    useNewUrlParser: true,
    useUnifiedTopology: true,
 }).then(() =>{
-    console.log("Connected to Databse!");
+    console.log("Connected to Database!");
 
     //setting listening port
     app.listen(port, () => {
@@ -35,5 +35,8 @@ app.use(
 );
 app.use(bodyParser.json());
 
-//importing routes
-// const userRoutes = require('./routes/user.routes');
+// importing routes
+const userRoutes = require('./routes/user.routes');
+
+//routes
+app.use(userRoutes);
